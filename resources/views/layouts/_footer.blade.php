@@ -6,4 +6,4 @@
 
         <p class="float-right"><a href="mailto:name@email.com">Contact Us</a></p>
     </div>
-</footer>_h
+</footer>
