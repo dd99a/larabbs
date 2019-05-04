@@ -28,6 +28,16 @@ class UserRequest extends FormRequest
             'name' => 'required|between:3,25|regex:/^[A-Za-z0-9\-\_]+$/|unique:users,name,' . Auth::id(),
             'email' => 'required|email',
             'introduction' => 'max:80',
+            'avatar' => 'mimes:jpeg, bmp, png, gif|dimension:min_width=208,min_height=288',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'avatar.mimes' => 'img must be jpeg, bmp, png, gif',
+            'avatar.dimensions' => 'the size of img must be more greater than 208X288px',
+            'name.unique' => 'the username is taken, pls choose other one',
         ];
     }
 }
