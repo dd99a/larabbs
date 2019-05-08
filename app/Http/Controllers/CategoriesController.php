@@ -15,7 +15,7 @@ class CategoriesController extends Controller
             ->where('category_id', $category->id)
             ->paginate(20);
 
-       
+
         return view('topics.index', compact('topics', 'category'));
     }
 }
