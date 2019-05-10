@@ -31,7 +31,7 @@
                 <div class="card-body">
                     <ul class="nav nav-tabs">
                         <li class="nav-item"><a class="nav-link active bg-transparent" href="#">Ta's topic</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Ta' replies</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Ta's replies</a></li>
                     </ul>
                     @include('users._topics', ['topics' => $user->topics()->recent()->paginate(5)])
                 </div>
